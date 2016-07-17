@@ -26,8 +26,23 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 0 images.
+  /// This `R.image` struct is generated, and contains static references to 2 images.
   struct image {
+    /// Image `delete`.
+    static let delete = ImageResource(bundle: _R.hostingBundle, name: "delete")
+    /// Image `paste`.
+    static let paste = ImageResource(bundle: _R.hostingBundle, name: "paste")
+    
+    /// `UIImage(named: "delete", bundle: ..., traitCollection: ...)`
+    static func delete(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.delete, compatibleWithTraitCollection: traitCollection)
+    }
+    
+    /// `UIImage(named: "paste", bundle: ..., traitCollection: ...)`
+    static func paste(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.paste, compatibleWithTraitCollection: traitCollection)
+    }
+    
     private init() {}
   }
   
@@ -44,8 +59,13 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `dial_a`.
+    static let dial_a: ReuseIdentifier<DialNumberCell> = ReuseIdentifier(identifier: "dial_a")
+    /// Reuse identifier `dial_b`.
+    static let dial_b: ReuseIdentifier<DialIconCell> = ReuseIdentifier(identifier: "dial_b")
+    
     private init() {}
   }
   

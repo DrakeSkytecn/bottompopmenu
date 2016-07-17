@@ -21,14 +21,15 @@ class RootViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        if !isMenuShow {
-            print("isMenuShow")
-            resetMenuY(-menuView.frame.height)
-        }
+        
     }
 
     override func viewDidAppear(animated: Bool) {
         print("viewDidAppear")
+        if !isMenuShow {
+            print("isMenuShow")
+            resetMenuY(-menuView.frame.height)
+        }
         isViewHidden = false
     }
     

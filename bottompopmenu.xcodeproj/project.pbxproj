@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		C9768924BB87F9A1FFE70529 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3533ABE7BF1F020E1B4F76A2 /* Pods.framework */; };
 		E12824791D3200F1006A4636 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12824781D3200F1006A4636 /* R.generated.swift */; };
+		E12F0E521D3B776300CBC7C6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12F0E511D3B776300CBC7C6 /* Constant.swift */; };
+		E12F0E561D3B9DDE00CBC7C6 /* DialNumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12F0E551D3B9DDE00CBC7C6 /* DialNumberCell.swift */; };
+		E12F0E5A1D3B9F0300CBC7C6 /* DialIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12F0E591D3B9F0300CBC7C6 /* DialIconCell.swift */; };
+		E16C31931D3A16C90014F53A /* DialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16C31921D3A16C90014F53A /* DialViewController.swift */; };
 		E1D43C891D30D38F00E93E08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D43C881D30D38F00E93E08 /* AppDelegate.swift */; };
 		E1D43C8B1D30D38F00E93E08 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D43C8A1D30D38F00E93E08 /* RootViewController.swift */; };
 		E1D43C8E1D30D38F00E93E08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D43C8C1D30D38F00E93E08 /* Main.storyboard */; };
@@ -22,6 +26,10 @@
 		3533ABE7BF1F020E1B4F76A2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E9A0A4A97DBB767953671D1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E12824781D3200F1006A4636 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		E12F0E511D3B776300CBC7C6 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		E12F0E551D3B9DDE00CBC7C6 /* DialNumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialNumberCell.swift; sourceTree = "<group>"; };
+		E12F0E591D3B9F0300CBC7C6 /* DialIconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialIconCell.swift; sourceTree = "<group>"; };
+		E16C31921D3A16C90014F53A /* DialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialViewController.swift; sourceTree = "<group>"; };
 		E1D43C851D30D38F00E93E08 /* bottompopmenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bottompopmenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D43C881D30D38F00E93E08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D43C8A1D30D38F00E93E08 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +98,10 @@
 				E1D43C911D30D38F00E93E08 /* LaunchScreen.storyboard */,
 				E1D43C941D30D38F00E93E08 /* Info.plist */,
 				E1D43C9A1D316D7300E93E08 /* KTabBarController.swift */,
+				E16C31921D3A16C90014F53A /* DialViewController.swift */,
+				E12F0E511D3B776300CBC7C6 /* Constant.swift */,
+				E12F0E551D3B9DDE00CBC7C6 /* DialNumberCell.swift */,
+				E12F0E591D3B9F0300CBC7C6 /* DialIconCell.swift */,
 			);
 			path = bottompopmenu;
 			sourceTree = "<group>";
@@ -231,10 +243,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E12F0E5A1D3B9F0300CBC7C6 /* DialIconCell.swift in Sources */,
 				E1D43C8B1D30D38F00E93E08 /* RootViewController.swift in Sources */,
 				E1D43C9B1D316D7300E93E08 /* KTabBarController.swift in Sources */,
 				E1D43C891D30D38F00E93E08 /* AppDelegate.swift in Sources */,
 				E12824791D3200F1006A4636 /* R.generated.swift in Sources */,
+				E12F0E561D3B9DDE00CBC7C6 /* DialNumberCell.swift in Sources */,
+				E16C31931D3A16C90014F53A /* DialViewController.swift in Sources */,
+				E12F0E521D3B776300CBC7C6 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
