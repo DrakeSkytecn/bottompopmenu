@@ -26,16 +26,23 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
     /// Image `delete`.
     static let delete = ImageResource(bundle: _R.hostingBundle, name: "delete")
+    /// Image `dial`.
+    static let dial = ImageResource(bundle: _R.hostingBundle, name: "dial")
     /// Image `paste`.
     static let paste = ImageResource(bundle: _R.hostingBundle, name: "paste")
     
     /// `UIImage(named: "delete", bundle: ..., traitCollection: ...)`
     static func delete(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
       return UIImage(resource: R.image.delete, compatibleWithTraitCollection: traitCollection)
+    }
+    
+    /// `UIImage(named: "dial", bundle: ..., traitCollection: ...)`
+    static func dial(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.dial, compatibleWithTraitCollection: traitCollection)
     }
     
     /// `UIImage(named: "paste", bundle: ..., traitCollection: ...)`
@@ -145,6 +152,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
+        if UIImage(named: "dial") == nil { throw ValidationError(description: "[R.swift] Image named 'dial' is used in storyboard 'Main', but couldn't be loaded.") }
         if _R.storyboard.main().a() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'a' could not be loaded from storyboard 'Main' as 'UIViewController'.") }
         if _R.storyboard.main().b() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'b' could not be loaded from storyboard 'Main' as 'UIViewController'.") }
       }

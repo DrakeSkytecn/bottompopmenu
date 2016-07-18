@@ -10,7 +10,7 @@ import UIKit
 
 class RootViewController: UIViewController {
 
-    private var isMenuShow: Bool = false
+    private var isMenuShow: Bool = true
     private var isViewHidden: Bool = true
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var aContainer: UIView!
@@ -21,7 +21,7 @@ class RootViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        
+        print("viewWillAppear")
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -34,11 +34,13 @@ class RootViewController: UIViewController {
     }
     
     override func viewDidDisappear(animated: Bool) {
+        print("viewDidDisappear")
         isViewHidden = true
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        print("didReceiveMemoryWarning")
         // Dispose of any resources that can be recreated.
     }
     
@@ -54,16 +56,19 @@ class RootViewController: UIViewController {
     }
     
     private func show() {
+        print("show")
         menuTranYAnimation(-menuView.frame.height)
         isMenuShow = true
     }
     
     private func hide() {
+        print("hide")
         menuTranYAnimation(menuView.frame.height)
         isMenuShow = false
     }
     
     private func resetMenuY(height: CGFloat) {
+        print("resetMenuY")
         var rect = self.menuView.frame
         rect.origin.y = rect.origin.y + height
         self.menuView.frame = rect
