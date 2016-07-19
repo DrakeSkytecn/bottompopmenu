@@ -12,6 +12,7 @@ class KTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBar.tintColor = UIColor(red: 0, green: 128, blue: 0, alpha: 1)
         // Do any additional setup after loading the view.
     }
 
@@ -21,10 +22,13 @@ class KTabBarController: UITabBarController {
     }
     
     override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
-        switch tabBar.selectedItem!.tag {
+        switch item.tag {
         case 0:
-            (viewControllers![0].childViewControllers[0] as! RootViewController).changeMenuState()
+            item.selectedImage = R.image.dial_down()
+            item.title = "收起"
+            (viewControllers![0].childViewControllers[0] as! RootViewController).changeMenuState(item)
         case 1:
+            tabBar.items![0].title = "拨打"
             print("1")
         default:
             break

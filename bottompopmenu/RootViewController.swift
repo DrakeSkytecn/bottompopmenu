@@ -44,13 +44,16 @@ class RootViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func changeMenuState() {
-        print("changeMenuState")
+    func changeMenuState(item: UITabBarItem) {
         if !isViewHidden {
             if isMenuShow {
                 hide()
+                item.selectedImage = R.image.dial_up()
+                item.title = "展开"
             } else {
                 show()
+                item.selectedImage = R.image.dial_down()
+                item.title = "收起"
             }
         }
     }

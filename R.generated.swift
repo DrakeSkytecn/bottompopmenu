@@ -26,12 +26,18 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 3 images.
+  /// This `R.image` struct is generated, and contains static references to 6 images.
   struct image {
     /// Image `delete`.
     static let delete = ImageResource(bundle: _R.hostingBundle, name: "delete")
     /// Image `dial`.
     static let dial = ImageResource(bundle: _R.hostingBundle, name: "dial")
+    /// Image `dial_down`.
+    static let dial_down = ImageResource(bundle: _R.hostingBundle, name: "dial_down")
+    /// Image `dial_tab`.
+    static let dial_tab = ImageResource(bundle: _R.hostingBundle, name: "dial_tab")
+    /// Image `dial_up`.
+    static let dial_up = ImageResource(bundle: _R.hostingBundle, name: "dial_up")
     /// Image `paste`.
     static let paste = ImageResource(bundle: _R.hostingBundle, name: "paste")
     
@@ -43,6 +49,21 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "dial", bundle: ..., traitCollection: ...)`
     static func dial(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
       return UIImage(resource: R.image.dial, compatibleWithTraitCollection: traitCollection)
+    }
+    
+    /// `UIImage(named: "dial_down", bundle: ..., traitCollection: ...)`
+    static func dial_down(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.dial_down, compatibleWithTraitCollection: traitCollection)
+    }
+    
+    /// `UIImage(named: "dial_tab", bundle: ..., traitCollection: ...)`
+    static func dial_tab(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.dial_tab, compatibleWithTraitCollection: traitCollection)
+    }
+    
+    /// `UIImage(named: "dial_up", bundle: ..., traitCollection: ...)`
+    static func dial_up(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.dial_up, compatibleWithTraitCollection: traitCollection)
     }
     
     /// `UIImage(named: "paste", bundle: ..., traitCollection: ...)`
@@ -152,6 +173,8 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
+        if UIImage(named: "dial_tab") == nil { throw ValidationError(description: "[R.swift] Image named 'dial_tab' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIImage(named: "dial_down") == nil { throw ValidationError(description: "[R.swift] Image named 'dial_down' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIImage(named: "dial") == nil { throw ValidationError(description: "[R.swift] Image named 'dial' is used in storyboard 'Main', but couldn't be loaded.") }
         if _R.storyboard.main().a() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'a' could not be loaded from storyboard 'Main' as 'UIViewController'.") }
         if _R.storyboard.main().b() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'b' could not be loaded from storyboard 'Main' as 'UIViewController'.") }

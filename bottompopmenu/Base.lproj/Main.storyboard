@@ -50,7 +50,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hzm-Es-BCG">
@@ -149,7 +149,7 @@
                                                     <constraint firstAttribute="height" constant="33" id="Phd-xH-Lp0"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14L-9i-HtP">
@@ -324,9 +324,12 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0yS-Oz-RnD" customClass="KTabBarController" customModule="bottompopmenu" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="HGh-9Y-18F"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="tFe-xT-Il6">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="tFe-xT-Il6">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.50196078431372548" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="H5M-hG-ozh" kind="relationship" relationship="viewControllers" id="AoO-T7-4cp"/>
@@ -337,12 +340,13 @@
             </objects>
             <point key="canvasLocation" x="1265" y="388"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--收起-->
         <scene sceneID="fVU-Na-T3q">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H5M-hG-ozh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="BEr-LU-Ili"/>
+                    <tabBarItem key="tabBarItem" title="收起" image="dial_tab" selectedImage="dial_down" id="BEr-LU-Ili"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ppY-2K-yFG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -365,7 +369,7 @@
                         <viewControllerLayoutGuide type="bottom" id="zeQ-hG-GrF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="W6k-hY-5lq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -381,6 +385,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TUQ-xa-oWu" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="1" systemItem="favorites" id="cR2-bi-tWk"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="thP-Y5-G2r">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -392,7 +397,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fb-eW-qav" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2076" y="1164"/>
+            <point key="canvasLocation" x="2077" y="1164"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="DOS-6m-ofF">
@@ -415,6 +420,8 @@
     </scenes>
     <resources>
         <image name="dial" width="32" height="32"/>
+        <image name="dial_down" width="32" height="32"/>
+        <image name="dial_tab" width="32" height="32"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
